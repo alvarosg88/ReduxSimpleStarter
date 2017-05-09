@@ -7,6 +7,8 @@ import ReactDOM from 'react-dom';
     }
 }*/
 
+const API_KEY = 'AIzaSyBkmvC9HKZUYYzHlbKlo5ZxaE3RVFDri2k';
+
 const App = () => {
     return <h1>Hi!</h1>;
 }
