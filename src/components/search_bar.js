@@ -13,7 +13,8 @@ class SearchBar extends Component {
     render() {
         return (
             <div>
-                <input 
+                <input
+                    className="form-control input-lg"
                     value={ this.state.term }
                     onChange={ event => this.setState({ term : event.target.value }) } 
                 />
