@@ -1,3 +1,4 @@
+import Promise from 'promise-polyfill'; 
 import _ from 'lodash';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
@@ -6,6 +7,10 @@ import VideoDetail from './components/video_detail';
 import VideoListItem from './components/video_list_item';
 import VideoList from './components/video_list';
 import YTSearch from 'youtube-api-search';
+
+if ( !window.Promise ){
+    window.Promise = Promise;
+}
 
 const API_KEY = 'AIzaSyBkmvC9HKZUYYzHlbKlo5ZxaE3RVFDri2k';
 
