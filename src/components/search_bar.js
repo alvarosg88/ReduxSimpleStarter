@@ -12,19 +12,22 @@ class SearchBar extends Component {
     
     render() {
         return (
-            <div>
+            <div className="col-md-12">
+                <div className="clearfix"></div>
                 <input
                     className="form-control input-lg"
                     value={ this.state.term }
-                    onChange={ event => this.setState({ term : event.target.value }) } 
+                    onChange={ event => this.onTermChangeValue(event.target.value) } 
                 />
+                <div className="clearfix"></div>
             </div>
         );
     }  
     
-    /*onInputChange(evt) {
-        console.log(evt)
-    }*/
+    onTermChangeValue(term) {
+        this.setState({ term });
+        this.props.onTermChange(term);
+    }
 }
 
 export default SearchBar;
